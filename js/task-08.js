@@ -7,7 +7,7 @@ function submitFunc(evt) {
 
   const {email, password} = evt.currentTarget.elements;
 
-  ((email.value || password.value) === "") 
+  ((email.value && password.value) === "") 
   ? alert("Please fill in all the fields.") 
   : console.log({
     [email.name]: email.value,
